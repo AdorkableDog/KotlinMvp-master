@@ -1,86 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/backgroundColor">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:id="@+id/mRefreshLayout"
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
-        app:srlAccentColor="@android:color/white"
-        app:srlEnableHeaderTranslationContent="false"
-        app:srlEnableLoadmore="false"
-        app:srlPrimaryColor="@color/colorPrimary">
+        android:background="@color/backgroundColor">
 
-        <com.scwang.smartrefresh.header.MaterialHeader
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mRefreshLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnableHeaderTranslationContent="false">
+            app:srlEnableLoadmore="false"
+            app:srlPrimaryColor="@color/colorPrimary">
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.classic.common.MultipleStatusView
-                android:id="@+id/multipleStatusView"
+            <com.scwang.smartrefresh.header.MaterialHeader
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:emptyView="@layout/layout_empty_view"
-                app:errorView="@layout/layout_error_view"
-                app:loadingView="@layout/layout_loading_view"
-                app:noNetworkView="@layout/layout_network_view">
+                android:layout_height="wrap_content"/>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/mRecyclerView"
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.classic.common.MultipleStatusView
+                    android:id="@+id/multipleStatusView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:paddingBottom="@dimen/padding_tab_layout_bottom"/>
+                    app:emptyView="@layout/layout_empty_view"
+                    app:errorView="@layout/layout_error_view"
+                    app:loadingView="@layout/layout_loading_view"
+                    app:noNetworkView="@layout/layout_network_view">
 
-            </com.classic.common.MultipleStatusView>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/padding_tab_layout_bottom"/>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:contentInsetStart="0dp">
+                </com.classic.common.MultipleStatusView>
 
-                <RelativeLayout
-                    android:id="@+id/rel_toolbar"
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetStart="0dp">
 
-                    <TextView
-                        android:id="@+id/tv_header_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/color_item_title"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:id="@+id/rel_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/iv_search"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="15dp"
-                        android:transitionName="@string/search_transition_name"
-                        tools:src="@mipmap/ic_action_search_black"
-                        tools:targetApi="lollipop"/>
+                        <TextView
+                            android:id="@+id/tv_header_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/color_item_title"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
 
-                </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/iv_search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15dp"
+                            android:transitionName="@string/search_transition_name"
+                            tools:src="@mipmap/ic_action_search_black"
+                            tools:targetApi="lollipop"/>
 
-            </android.support.v7.widget.Toolbar>
+                    </RelativeLayout>
 
-        </FrameLayout>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </FrameLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </RelativeLayout>
 
 
-</RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="18dp"
+        android:src="@android:drawable/ic_menu_upload_you_tube"
+        app:backgroundTint="#ffffff"
+        app:fabSize="normal"
+        app:layout_behavior="com.hazz.kotlinmvp.behavior.ScrollAwareFABBehavior"/>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|right|end"-->
+    <!--android:layout_marginBottom="60dp"-->
+    <!--android:layout_marginRight="18dp"-->
+    <!--android:src="@android:drawable/ic_menu_upload_you_tube"-->
+    <!--app:backgroundTint="#ffffff"-->
+    <!--app:elevation="6dp"-->
+    <!--app:fabSize="normal"-->
+    <!--app:layout_anchor="@id/mRecyclerView"-->
+    <!--app:layout_anchorGravity="bottom|right|end"-->
+    <!--app:layout_behavior="com.hazz.kotlinmvp.behavior.MyFabBehavior"-->
+    <!--app:pressedTranslationZ="8dp"-->
+    <!--app:rippleColor="#ff87ffeb"-->
+    <!--app:useCompatPadding="false"/>-->
+
+</android.support.design.widget.CoordinatorLayout>

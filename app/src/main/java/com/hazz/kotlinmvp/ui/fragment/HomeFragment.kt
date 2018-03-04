@@ -124,8 +124,6 @@ class HomeFragment : BaseFragment(), HomeContract.View {
                         }
                     }
                 }
-
-
             }
         })
 
