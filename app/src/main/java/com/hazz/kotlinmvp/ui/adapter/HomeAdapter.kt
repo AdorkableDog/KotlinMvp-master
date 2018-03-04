@@ -55,7 +55,6 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
         notifyDataSetChanged()
     }
 
-
     /**
      * 得到 Item 的类型
      */
@@ -70,7 +69,6 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
         }
     }
 
-
     /**
      *  得到 RecyclerView Item 数量（Banner 作为一个 item）
      */
@@ -81,7 +79,6 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
             else -> 1
         }
     }
-
 
     /**
      * 绑定布局
@@ -133,10 +130,7 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
             ITEM_TYPE_CONTENT -> {
                 setVideoItem(holder, mData[position + bannerItemSize - 1])
             }
-
-
         }
-
     }
 
     /**
@@ -152,8 +146,6 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
                 ViewHolder(inflaterView(R.layout.item_home_content, parent))
         }
     }
-
-
     /**
      * 加载布局
      */
@@ -162,14 +154,11 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
         val view = mInflater?.inflate(mLayoutId, parent, false)
         return view!!
     }
-
-
     /**
      * 加载 content item
      */
     private fun setVideoItem(holder: ViewHolder, item: HomeBean.Issue.Item) {
         val itemData = item.data
-
         val defAvatar = R.mipmap.default_avatar
         val cover = itemData?.cover?.feed
         var avatar = itemData?.author?.icon
@@ -219,8 +208,6 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
         holder.setOnItemClickListener(listener = View.OnClickListener {
             goToVideoPlayer(mContext as Activity, holder.getView(R.id.iv_cover_feed), item)
         })
-
-
     }
 
     /**
@@ -243,6 +230,4 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
             activity.overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
         }
     }
-
-
 }

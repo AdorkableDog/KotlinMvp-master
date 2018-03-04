@@ -85,11 +85,6 @@ Module Description:
  - The initial version, the main function has been completed.
 
 
-## Thanks
-
-- Thanks for all the great open source projects.
-- [Eyepetizer](https://github.com/kaikaixue/Eyepetizer) ：The project was initially saw only started to do, learned a lot, writing my own code style.
-
 ## Statement
 **Project API are from the open-eye video, purely for learning to communicate, shall not be used for commercial purposes!**
 
