@@ -73,16 +73,6 @@ Module Description:
  - **Mine：** Personal homepage related introduction.
  - **Watch History：** View previously seen videos, sorted by time.
 
-## Update log
-
-
-**v1.1**
-
- - Remove useless code, add watch record function.
-
-**v1.0**
-
- - The initial version, the main function has been completed.
 
 
 ## Statement
