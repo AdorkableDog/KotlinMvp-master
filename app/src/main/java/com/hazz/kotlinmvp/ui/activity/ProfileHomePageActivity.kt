@@ -71,8 +71,6 @@ class ProfileHomePageActivity : BaseActivity() {
         toolbar.setBackgroundColor(0)
          //返回
         toolbar.setNavigationOnClickListener { finish() }
-
-
         refreshLayout.setOnRefreshListener {  mWebView.loadUrl("https://github.com/KungFuteddy/KotlinMvp-master") }
         refreshLayout.autoRefresh()
 
