@@ -4,12 +4,9 @@
     <modules>
       <module fileurl="file://E:\ChomeDownload\KotlinMvp-master\KotlinMvp.iml" filepath="E:\ChomeDownload\KotlinMvp-master\KotlinMvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinMvp-master.iml" filepath="$PROJECT_DIR$/KotlinMvp-master.iml" />
-      <module fileurl="file://E:\androidFile\KotlinMvp-master\KotlinMvp-master.iml" filepath="E:\androidFile\KotlinMvp-master\KotlinMvp-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://E:\ChomeDownload\KotlinMvp-master\app\app.iml" filepath="E:\ChomeDownload\KotlinMvp-master\app\app.iml" />
-      <module fileurl="file://E:\androidFile\KotlinMvp-master\app\app.iml" filepath="E:\androidFile\KotlinMvp-master\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiple-status-view/multiple-status-view.iml" filepath="$PROJECT_DIR$/multiple-status-view/multiple-status-view.iml" />
-      <module fileurl="file://E:\androidFile\KotlinMvp-master\multiple-status-view\multiple-status-view.iml" filepath="E:\androidFile\KotlinMvp-master\multiple-status-view\multiple-status-view.iml" />
       <module fileurl="file://E:\ChomeDownload\KotlinMvp-master\multiple-status-view\multiple-status-view.iml" filepath="E:\ChomeDownload\KotlinMvp-master\multiple-status-view\multiple-status-view.iml" />
     </modules>
   </component>

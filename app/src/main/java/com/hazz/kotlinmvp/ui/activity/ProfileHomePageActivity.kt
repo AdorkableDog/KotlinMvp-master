@@ -73,7 +73,7 @@ class ProfileHomePageActivity : BaseActivity() {
         toolbar.setNavigationOnClickListener { finish() }
 
 
-        refreshLayout.setOnRefreshListener {  mWebView.loadUrl("https://xuhaoblog.com/KotlinMvp") }
+        refreshLayout.setOnRefreshListener {  mWebView.loadUrl("https://github.com/KungFuteddy/KotlinMvp-master") }
         refreshLayout.autoRefresh()
 
         mWebView.settings.javaScriptEnabled = true
