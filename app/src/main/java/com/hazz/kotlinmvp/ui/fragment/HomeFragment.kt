@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import com.hazz.kotlinmvp.R
 import com.hazz.kotlinmvp.base.BaseFragment
 import com.hazz.kotlinmvp.mvp.contract.HomeContract
@@ -85,6 +86,11 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         //设置下拉刷新主题颜色
         mRefreshLayout.setPrimaryColorsId(R.color.color_light_black, R.color.color_title_bg)
 
+        fab.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                mRecyclerView.smoothScrollToPosition(0)
+            }
+        })
 
         mRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {

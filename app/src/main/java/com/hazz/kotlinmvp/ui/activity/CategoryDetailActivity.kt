@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import com.hazz.kotlinmvp.Constants
 import com.hazz.kotlinmvp.R
 import com.hazz.kotlinmvp.base.BaseActivity
@@ -63,6 +64,13 @@ class CategoryDetailActivity : BaseActivity(), CategoryDetailContract.View {
         collapsing_toolbar_layout.title = categoryData?.name
         collapsing_toolbar_layout.setExpandedTitleColor(Color.WHITE) //设置还没收缩时状态下字体颜色
         collapsing_toolbar_layout.setCollapsedTitleTextColor(Color.BLACK) //设置收缩后Toolbar上字体的颜色
+
+        fab_.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+                mRecyclerView.smoothScrollToPosition(0)
+            }
+
+        })
 
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mRecyclerView.adapter = mAdapter

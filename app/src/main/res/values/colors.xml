@@ -29,7 +29,7 @@
     <!-- title 半透明背景颜色 -->
     <color name="color_title_bg">#CCFFFFFF</color>
     <!-- 默认背景色 -->
-    <color name="backgroundColor">#EEEEEE</color>
+    <color name="backgroundColor">#e4e4e4</color>
 
     <!-- white -->
     <color name="color_white">#FFFFFF</color>

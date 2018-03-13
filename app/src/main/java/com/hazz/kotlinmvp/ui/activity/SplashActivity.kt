@@ -101,7 +101,7 @@ class SplashActivity : BaseActivity() {
                     }
 
                     override fun onFinish() {
-                        showToast("初始化完毕！")
+//                        showToast("初始化完毕！")
                         layout_splash.startAnimation(alphaAnimation)
                     }
 
